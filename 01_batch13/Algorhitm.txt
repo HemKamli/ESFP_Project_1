@@ -1,0 +1,97 @@
+Main menu
+------------
+step:1- start
+step:2- Print the Options of menu
+step:3- Take input from the user for choice
+step:4- Switch case
+	case 1: call function addbook
+	case 2: call function deletebook
+	case 3: call function issuebook
+	case 4: call function submitbook
+	case 5: call function Viewbook
+	case 5: call function submit/isse record
+step:5- End
+
+Addbook Function
+-----------------
+step:1- Start
+step:2- Take input for bookauthor, book id and book published year
+step:3- Create and open file(Book.txt)
+step:4- Write the data in the file(Book.txt)
+step:5- close the file(Book.txt)
+step:6- End
+
+Deletebook Function
+--------------------
+step:1- Start
+step:2- Input the book Id 
+step:3- Open the file(Book.txt)
+step:4- Open the file(temp.txt)
+step:5- Read the file using while loop
+step:6- if input id =  stored id in file
+	   skip
+	else write in temp file				
+step:7- Close the file(temp.txt)
+step:8- Close the file(Book.txt)
+step:9- Remove the file(Book.txt)
+step:10- Rename the file(temp.txt = Book.txt)
+step:11- End
+
+Issuebook Function
+---------------------
+Step:1- Start
+Step:2- Get SYSTEMDATE (Issue date)
+Step:3- Take input from user for Student_name,Student_address,Course_Id,college_Id,Contact_no,Book_Id
+Step:4- Open the file(issue.txt)
+Step:5- Open the file(Book.txt)
+Step:6- Read the file using while loop(issue.txt)
+Step:7- if input id =  stored id in file(Book.txt)	
+	   write the data in file(issue.txt)
+Step:8- Close the file(Book.txt, issue.txt)
+Step:9- End
+
+Submitbook function
+--------------------
+Step:1- Start
+Step:2- Get SYSTEMDATE (submit date)
+Step:3- Take input from user for college_Id
+Step:4- Open the file(submit.txt)
+Step:5- Open the file(temp.txt)
+Step:6- Open the file(issue.txt)
+Step:7- Read the file using while loop(issue.txt)
+Step:8- if input college_id = college_id in issue file
+	fine = no days * 5
+	write data in file(submit.txt)  
+	else
+	write data in file(temp.txt)
+Step:9- Close the file(issue.txt, temp.txt, submit.txt)
+Step:10- Reomve the file(issue.txt)
+Step:11- Rename the file(temp.txt = issue.txt)
+Step:12- End
+
+Viewbook function
+--------------------
+Step:1- Start
+Step:2- Print table atributes (Book_author, Book published year, Book_id)
+Step:3- open the file(book.txt)
+Step:4- read the file using while loop(book.txt)
+		while data in file(book.txt)
+			print data from file(book.txt)	
+Step:5- close the file(book.txt)
+Step:6- End
+
+
+ViewSubmit/Issue record function
+-----------------------------------
+Step:1- Start
+Step:2- Print Table attributes(Student_name,Book_author,Book_published_year,Student_address,Course_Id,college_Id,Contact_no,Book_Id,submit_date,Issue_date,fine)
+Step:3- Open the file(issue.txt, submit.txt)
+Step:4- read the file using while (issue.txt)
+		while data in file(issue.txt)
+			print data from file(issue.txt)
+Step:5- read the file using while loop(submit.txt)
+		while data in file(submit.txt)
+			print data from file(submit.txt)
+Step:6- Close the file(submit.txt, issue.txt)
+Step:7- End
+
